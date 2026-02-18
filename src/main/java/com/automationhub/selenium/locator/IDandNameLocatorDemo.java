@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
 
 public class IDandNameLocatorDemo {
 
@@ -17,6 +18,11 @@ public class IDandNameLocatorDemo {
 	driver.manage().window().maximize();
 	
 	driver.findElement(By.id("email")).sendKeys("Kannathasan@gmail.com");
+	
+	/*
+	 * WebElement emailTextbox = driver.findElement(By.id("email"));
+	 * emailTextbox.sendKeys("Kananthasane@gmail.com");
+	 */
 	
 	Thread.sleep(4000);
 	
