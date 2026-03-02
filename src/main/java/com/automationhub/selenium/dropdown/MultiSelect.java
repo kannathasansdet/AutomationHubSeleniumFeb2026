@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
+import org.openqa.selenium.JavascriptExecutor;
 
 /*Example 2- Handling multi-select using Selenium WebDriver
 To automate multi-select using Selenium WebDriver's Select class, we will use the following use-case:
@@ -21,6 +21,7 @@ Select 'Saab' using value and deselect the same using value.
 Deselect all the options.
 Close the browser.*/
 
+
 public class MultiSelect {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -30,11 +31,23 @@ public class MultiSelect {
 		WebDriver driver = new ChromeDriver();
 
 		// Navigate to the URL
-		driver.get("https://demoqa.com/select-menu");
+		driver.get("https://demoqa.com/");
 
 		// Maximizing window
 		driver.manage().window().maximize();
+		
+		WebElement element1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/div/div[2]/div/a[4]/div/div/div[3]/h5"));
 
+		((JavascriptExecutor) driver)
+        .executeScript("arguments[0].click();", element1);
+		
+		WebElement element = driver.findElement(By.xpath("//span[normalize-space()='Select Menu']"));
+
+		((JavascriptExecutor) driver)
+		        .executeScript("arguments[0].click();", element);
+
+
+		
 		// Selecting the multi-select element by locating its id
 		Select select = new Select(driver.findElement(By.id("cars")));
 
@@ -52,12 +65,13 @@ public class MultiSelect {
 
 			// Selecting option as 'Opel'-- ByIndex
 			System.out.println("Select option Opel by Index");
-			select.selectByIndex(3);
+			select.selectByIndex(2);
 			Thread.sleep(4000);
+		
 
 			// Selecting the option as 'Saab'-- ByValue
 			System.out.println("Select option saab by Value");
-			select.selectByValue("opel");
+			select.selectByValue("saab");
 			Thread.sleep(4000);
 
 			// Selecting the option by text
