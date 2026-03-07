@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Optional Suite">
+
+    <test name="Optional Test">
+        <classes>
+            <class name="com.testNG.concepts.OptionalExample"/>
+        </classes>
+    </test>
+
+</suite>

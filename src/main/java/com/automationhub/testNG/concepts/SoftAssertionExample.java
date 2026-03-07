@@ -7,18 +7,19 @@ public class SoftAssertionExample {
 
     @Test
     public void softAssertTest() {
-        SoftAssert softAssert = new SoftAssert();
+    	
+        SoftAssert s = new SoftAssert();
         
         System.out.println("Check 1: Title");
-        softAssert.assertEquals("Home", "Dashboard", "Title mismatch");
+        s.assertEquals("Home", "Dashboard", "Title mismatch");
 
         System.out.println("Check 2: Logo");
-        softAssert.assertTrue(false, "Logo not visible");
+        s.assertTrue(false, "Logo not visible");
 
         System.out.println("Check 3: Username");
-        softAssert.assertEquals("John", "John", "Username mismatch");
+        s.assertEquals("John", "John", "Username mismatch");
 
         // MUST be called at the end
-        softAssert.assertAll();
+        s.assertAll();
     }
 }

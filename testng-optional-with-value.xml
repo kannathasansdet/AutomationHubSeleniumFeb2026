@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Optional Suite">
+
+    <test name="Optional Test">
+		 <parameter name="city" value="Los Angeles"/>
+        <parameter name="zipCode" value="90001"/>
+        <classes>
+            <class name="com.testNG.concepts.OptionalExample"/>
+        </classes>
+    </test>
+
+</suite>

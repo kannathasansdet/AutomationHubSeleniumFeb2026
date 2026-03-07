@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Level Example">
+
+    <!-- Suite level parameter -->
+    <parameter name="browser" value="Chrome"/>
+
+    <test name="Test 1">
+        <parameter name="browser" value="Edge"/> <!-- override -->
+        <classes>
+            <class name="com.testNG.concepts.TestLevelExample"/>
+        </classes>
+    </test>
+
+    <test name="Test 2">
+        <!-- Suite-level browser = Chrome will apply -->
+        <classes>
+            <class name="com.testNG.concepts.TestLevelExample"/>
+        </classes>
+    </test>
+
+</suite>

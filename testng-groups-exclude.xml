@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ExcludeGroupSuite">
+
+    <test name="Run All Except Smoke">
+        <groups>
+            <run>
+                <exclude name="smoke"/>
+            </run>
+        </groups>
+
+        <classes>
+             <class name="com.testNG.concepts.GroupsExample"/>
+            <class name="com.testNG.concepts.DependsOnGroupsExample"/>
+        </classes>
+    </test>
+
+</suite>
