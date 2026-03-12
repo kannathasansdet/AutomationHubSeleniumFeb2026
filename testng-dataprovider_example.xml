@@ -8,7 +8,7 @@
   
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.excelFile.Intergration.CreateLead_E"/>
+      <class name="com.automationhub.selenium.integration.CreateLead_E"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
